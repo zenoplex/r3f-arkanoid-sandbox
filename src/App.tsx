@@ -280,8 +280,6 @@ const Scene = (): JSX.Element => {
       <Physics
         size={100}
         gravity={[0, 0, 0]}
-        iterations={50}
-        tolerance={0.0001}
         defaultContactMaterial={{
           restitution: 1.05,
           friction: 10,
@@ -308,7 +306,7 @@ const Scene = (): JSX.Element => {
 const App = (): JSX.Element => {
   return (
     <Canvas
-      gl={{ antialias: false }}
+      gl={{ antialias: true }}
       camera={{ position: [0, 5, 30], fov: 35 }}
       shadowMap
     >
